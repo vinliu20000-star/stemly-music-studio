@@ -1,0 +1,22 @@
+{
+  "name": "Stemly Music Studio",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Stemly Preview",
+      "onAutoForward": "openPreview",
+      "visibility": "private"
+    }
+  },
+  "postCreateCommand": "corepack enable && pnpm install",
+  "postStartCommand": "nohup pnpm dev -- --host 0.0.0.0 > /tmp/stemly-dev.log 2>&1 &",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      "extensions": ["bradlc.vscode-tailwindcss"]
+    }
+  }
+}
