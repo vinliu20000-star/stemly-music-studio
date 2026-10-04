@@ -26,6 +26,6 @@ pnpm dev
 pnpm build
 ```
 
-## GitHub Codespaces 私人預覽
+## GitHub Pages
 
-在儲存庫的 **Code → Codespaces** 建立環境。依賴安裝完成後，Stemly 會自動啟動並開啟私人預覽；只有具備此私人儲存庫權限的 GitHub 帳號能存取。
+每次推送到 `main` 後，GitHub Actions 會自動建置並部署可操作的網站。
